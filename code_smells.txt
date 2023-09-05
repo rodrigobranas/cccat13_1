@@ -1,0 +1,23 @@
+Code Smells:
+
+1 - Nomes ruins (variável, método, classe)
+
+* renomear variável
+* renomear método
+* renomear classe
+
+2 - Código comentado (talvez o código pudesse ser mais claro para não precisar do comentário)
+3 - Código morto (código "desligado")
+4 - distância da margem (aumento da complexidade)
+5 - comandos condicionais complexos (acúmulo de ifs e elses)
+6 - linha em branco (sem padrão)
+7 - números mágicos (que poderiam ser constantes)
+8 - responsabilidades diferentes (quebra do SRP)
+9 - métodos grandes
+10 - classe grande
+11 - tratamento de exceções inadequado (return -1, try/catch desnecessário)
+12 - variáveis declaradas muito antes da sua utilização (eventualmente grupos de variáveis)
+13 - variáveis declaradas juntas
+14 - variável não tipada (em linguagens onde a tipagem é obrigatória)
+15 - else desnecessário (inverter o if)
+16 - código duplicado
