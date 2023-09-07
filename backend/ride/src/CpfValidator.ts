@@ -4,14 +4,12 @@ export default class CpfValidator {
 		if (!cpf) return false;
 		cpf = this.clean(cpf); 
 		if (this.isInvalidLength(cpf)) return false;
-		if (this.allDigitsTheSame(cpf)) {
+		if (this.allDigitsTheSame(cpf)) return false;
 		const dg1 = this.calculateDigit(cpf, 10); 
 		const dg2 = this.calculateDigit(cpf, 11);
 		let checkDigit = this.extractDigit(cpf);  
 		const calculatedDigit = `${dg1}${dg2}`;  
 		return checkDigit === calculatedDigit;
-			
-		} else return false
 	}
 
 	clean (cpf: string) {
@@ -23,7 +21,7 @@ export default class CpfValidator {
 	}
 
 	allDigitsTheSame (cpf: string) {
-		return !cpf.split("").every(c => c === cpf[0]);
+		return cpf.split("").every(c => c === cpf[0]);
 	}
 
 	calculateDigit (cpf: string, factor: number) {
